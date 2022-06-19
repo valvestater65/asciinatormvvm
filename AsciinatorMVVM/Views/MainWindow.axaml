@@ -12,7 +12,7 @@
         <vm:MainWindowViewModel/>
     </Design.DataContext>
 
-    <Grid ColumnDefinitions="*" RowDefinitions="*,4*" Margin="5">
+    <Grid ColumnDefinitions="*" RowDefinitions="Auto,*" Margin="5">
         <StackPanel Grid.Column="0" Grid.Row="0" Orientation="Horizontal" VerticalAlignment="Top">
             <Button Content="Select File" x:Name="BtnSelectFile" Click="BtnSelectFile_OnClick"/>
             <Label Content="Selected File:"></Label>
@@ -20,7 +20,7 @@
             <Button x:Name="BtnProcessImage" Content="Process Image"></Button>
             <Button x:Name="BtnCopyToClipboard" Content="Copy"></Button>
         </StackPanel>
-        <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" Grid.Column="0" Grid.Row="1">
+        <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Auto" Grid.Column="0" Grid.Row="1" VerticalAlignment="Top">
             <TextBlock Text="{Binding GeneratedAscii}" LineHeight="{Binding LineHeight}" 
                        FontSize="{Binding FontSize}"
                        FontFamily="Courier"
